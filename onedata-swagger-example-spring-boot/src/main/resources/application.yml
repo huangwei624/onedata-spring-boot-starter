@@ -1,0 +1,11 @@
+openapi:
+  swagger:
+    contact:
+      name: hw
+    description: swagger文档
+    enabled: true
+    packages: info.onedata.swagger.example
+    title: swagger-starter-example
+    version: 1.0.0
+server:
+  port: 28080

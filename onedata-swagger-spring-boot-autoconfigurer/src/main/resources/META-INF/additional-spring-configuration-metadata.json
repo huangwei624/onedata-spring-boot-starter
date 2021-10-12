@@ -1,0 +1,48 @@
+{
+  "properties": [
+    {
+      "name": "openapi.swagger.ignore-classes",
+      "type": "java.lang.String",
+      "description": "Description for openapi.swagger.ignore-classes."
+    },
+    {
+      "name": "openapi.swagger.title",
+      "type": "java.lang.String",
+      "description": "Description for openapi.swagger.title."
+    },
+    {
+      "name": "openapi.swagger.version",
+      "type": "java.lang.String",
+      "description": "Description for openapi.swagger.version."
+    },
+    {
+      "name": "openapi.swagger.packages",
+      "type": "java.lang.String",
+      "description": "Description for openapi.swagger.packages."
+    },
+    {
+      "name": "openapi.swagger.enabled",
+      "type": "java.lang.String",
+      "description": "Description for openapi.swagger.enabled."
+    },
+    {
+      "name": "openapi.swagger.description",
+      "type": "java.lang.String",
+      "description": "Description for openapi.swagger.enabled."
+    },
+    {
+      "name": "openapi.swagger.contact.name",
+      "type": "java.lang.String",
+      "description": "Description for openapi.swagger.enabled."
+    },
+    {
+      "name": "openapi.swagger.contact.url",
+      "type": "java.lang.String",
+      "description": "Description for openapi.swagger.enabled."
+    },
+    {
+      "name": "openapi.swagger.contact.email",
+      "type": "java.lang.String",
+      "description": "Description for openapi.swagger.enabled."
+    }
+  ] }
