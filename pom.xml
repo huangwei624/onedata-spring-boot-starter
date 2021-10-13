@@ -10,14 +10,13 @@
     </parent>
     <groupId>info.onedata</groupId>
     <artifactId>onedata-spring-boot-starter</artifactId>
-    <version>1.0.0-RELEASE</version>
+    <version>${revision}</version>
     <packaging>pom</packaging>
     <name>onedata-spring-boot-starter</name>
 
     <properties>
         <java.version>1.8</java.version>
-        <onedata-swagger-starter.version>1.0.0-RELEASE</onedata-swagger-starter.version>
-        <onedata-swagger-example.version>0.0.1-SNAPSHOT</onedata-swagger-example.version>
+        <revision>1.0.1-RELEASE</revision>
     </properties>
 
     <dependencies>
@@ -33,18 +32,22 @@
         </dependency>
     </dependencies>
 
-
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>info.onedata</groupId>
                 <artifactId>onedata-swagger-spring-boot-starter</artifactId>
-                <version>${onedata-swagger-starter.version}</version>
+                <version>${revision}</version>
             </dependency>
             <dependency>
                 <groupId>info.onedata</groupId>
                 <artifactId>onedata-swagger-example-spring-boot</artifactId>
-                <version>${onedata-swagger-example.version}</version>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>info.onedata</groupId>
+                <artifactId>onedata-swagger-spring-boot-autoconfigurer</artifactId>
+                <version>${revision}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

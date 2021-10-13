@@ -5,18 +5,17 @@
     <parent>
         <groupId>info.onedata</groupId>
         <artifactId>onedata-spring-boot-starter</artifactId>
-        <version>1.0.0-RELEASE</version>
+        <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <artifactId>onedata-swagger-spring-boot-starter</artifactId>
-    <version>1.0.0-RELEASE</version>
+    <version>${revision}</version>
     <name>onedata-swagger-spring-boot-starter</name>
 
     <dependencies>
         <dependency>
             <groupId>info.onedata</groupId>
             <artifactId>onedata-swagger-spring-boot-autoconfigurer</artifactId>
-            <version>1.0.0-RELEASE</version>
         </dependency>
     </dependencies>
 
