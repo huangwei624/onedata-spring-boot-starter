@@ -56,6 +56,7 @@
         <module>onedata-swagger-spring-boot-starter</module>
         <module>onedata-swagger-spring-boot-autoconfigurer</module>
         <module>onedata-swagger-example-spring-boot</module>
+        <module>dynamic-datasource-mybatis-plus</module>
     </modules>
 
     <!-- 配置上传仓库 -->
