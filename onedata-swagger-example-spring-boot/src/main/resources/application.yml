@@ -9,3 +9,8 @@ openapi:
     version: 1.0.0
 server:
   port: 28080
+
+
+#datascope:
+#  ignore-tables:
+#    resource_info, role_resource_info

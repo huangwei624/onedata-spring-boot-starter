@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "datascope.ignore-tables",
+      "type": "java.lang.String",
+      "description": "Description for datascope.ignore-tables."
+  }
+] }
