@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.springframework.cloud.gateway.route.RouteDefinitionLocator</OriginalElement>
+  <nodes>
+    <node x="236.00000000000006" y="107.0">org.springframework.cloud.gateway.route.RouteDefinitionLocator</node>
+    <node x="1167.0178571428573" y="196.0">org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator</node>
+    <node x="761.0" y="9.0">java.util.EventListener</node>
+    <node x="458.50000000000006" y="196.0">org.springframework.cloud.gateway.route.CachingRouteDefinitionLocator</node>
+    <node x="50.869047619047706" y="276.0">org.springframework.cloud.gateway.route.InMemoryRouteDefinitionRepository</node>
+    <node x="737.0" y="107.0">org.springframework.context.ApplicationListener</node>
+    <node x="1191.0178571428573" y="107.0">org.springframework.cloud.gateway.route.RouteLocator</node>
+    <node x="943.8154761904763" y="196.0">org.springframework.cloud.gateway.route.CachingRouteLocator</node>
+    <node x="0.0" y="107.0">org.springframework.cloud.gateway.route.RouteDefinitionWriter</node>
+    <node x="82.8690476190477" y="196.0">org.springframework.cloud.gateway.route.RouteDefinitionRepository</node>
+  </nodes>
+  <notes>
+    <note x="280.50000000000006" y="0.0">
+      <node>org.springframework.cloud.gateway.route.RouteDefinitionLocator</node>
+      <value>获取路由的定义信息 \nRouteDefinition</value>
+      <edge>
+        <point x="0.0" y="-15.0" />
+        <point x="0.0" y="24.0" />
+      </edge>
+    </note>
+    <note x="480.00000000000006" y="98.0">
+      <node>org.springframework.cloud.gateway.route.CachingRouteDefinitionLocator</node>
+      <value>监听器，监听RefreshRouteEvent 事件，\n清除RouteDefinition 缓存</value>
+      <edge>
+        <point x="0.0" y="-15.0" />
+        <point x="0.0" y="24.0" />
+      </edge>
+    </note>
+    <note x="957.0" y="98.0">
+      <node>org.springframework.cloud.gateway.route.CachingRouteLocator</node>
+      <value>监听 RefreshRouteEvent事件，\n清除Route 缓存</value>
+      <edge>
+        <point x="0.0" y="-15.0" />
+        <point x="1043.8154761904761" y="171.0" />
+        <point x="1051.5" y="171.0" />
+        <point x="0.0" y="24.0" />
+      </edge>
+    </note>
+    <note x="1216.5178571428573" y="0.0">
+      <node>org.springframework.cloud.gateway.route.RouteLocator</node>
+      <value>获取路由信息\nRoute</value>
+      <edge>
+        <point x="0.0" y="-15.0" />
+        <point x="0.0" y="24.0" />
+      </edge>
+    </note>
+  </notes>
+  <edges>
+    <edge source="org.springframework.cloud.gateway.route.CachingRouteLocator" target="org.springframework.context.ApplicationListener">
+      <point x="-66.66666666666674" y="-15.0" />
+      <point x="977.1488095238095" y="171.0" />
+      <point x="887.0" y="171.0" />
+      <point x="50.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.context.ApplicationListener" target="java.util.EventListener">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.cloud.gateway.route.InMemoryRouteDefinitionRepository" target="org.springframework.cloud.gateway.route.RouteDefinitionRepository">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.cloud.gateway.route.RouteDefinitionRepository" target="org.springframework.cloud.gateway.route.RouteDefinitionWriter">
+      <point x="-62.0" y="-15.0" />
+      <point x="144.8690476190477" y="171.0" />
+      <point x="108.0" y="171.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.cloud.gateway.route.CachingRouteDefinitionLocator" target="org.springframework.cloud.gateway.route.RouteDefinitionLocator">
+      <point x="-93.33333333333331" y="-15.0" />
+      <point x="505.16666666666674" y="171.0" />
+      <point x="404.00000000000006" y="171.0" />
+      <point x="56.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.cloud.gateway.route.RouteDefinitionRepository" target="org.springframework.cloud.gateway.route.RouteDefinitionLocator">
+      <point x="62.0" y="-15.0" />
+      <point x="268.8690476190477" y="171.0" />
+      <point x="292.00000000000006" y="171.0" />
+      <point x="-56.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator" target="org.springframework.cloud.gateway.route.RouteLocator">
+      <point x="0.0" y="-15.0" />
+      <point x="36.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.cloud.gateway.route.CachingRouteLocator" target="org.springframework.cloud.gateway.route.RouteLocator">
+      <point x="66.66666666666674" y="-15.0" />
+      <point x="1110.4821428571431" y="171.0" />
+      <point x="1227.0178571428573" y="171.0" />
+      <point x="-36.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.cloud.gateway.route.CachingRouteDefinitionLocator" target="org.springframework.context.ApplicationListener">
+      <point x="93.33333333333337" y="-15.0" />
+      <point x="691.8333333333335" y="171.0" />
+      <point x="787.0" y="171.0" />
+      <point x="-50.0" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="716.0" y="153.0" />
+  <SelectedNodes>
+    <node>org.springframework.cloud.gateway.route.RouteDefinitionLocator</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
