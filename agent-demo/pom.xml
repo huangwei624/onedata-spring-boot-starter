@@ -54,7 +54,7 @@
                             <!-- agent 的 入口类， 类中包含 premain 方法                           -->
                             <Premain-Class>org.onedata.agentdemo.AgentStarter</Premain-Class>
                             <!--     agent jar 包名称                       -->
-                            <Boot-Class-Path>${build.finalName}.jar</Boot-Class-Path>
+<!--                            <Boot-Class-Path>${build.finalName}.jar</Boot-Class-Path>-->
                             <!--true表示能重定义此代理所需的类，默认值为 false（可选）-->
                             <Can-Redefine-Classes>false</Can-Redefine-Classes>
                             <!--true表示能重转换此代理所需的类，默认值为 false （可选）-->

@@ -85,6 +85,7 @@
         <module>dynamic-datasource-mybatis-plus</module>
         <module>dynamic-route-cloud-gateway</module>
         <module>agent-demo</module>
+        <module>asm-demo</module>
     </modules>
 
     <!-- 配置上传仓库 -->

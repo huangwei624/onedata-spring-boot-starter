@@ -1,25 +1,36 @@
 package org.onedata.agentdemo;
 
+import org.onedata.agentdemo.exec.timer.ExeCmdBuilder;
+import org.onedata.agentdemo.exec.timer.ExecTimerTransformer;
+import org.onedata.agentdemo.exec.timer.cmds.IExeCmd;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.lang.instrument.Instrumentation;
 
+
 /**
- * agent 入口类
- *
- * @version 1.0.0
- * @author: huangwei
- * @date: 2022/1/11 20:29
- * @description: AgentStarter
+ *  @Description:代理程序入口类
+ *  @Author: York.Hwang
+ *  @Date: 2020/2/15 23:40
  */
 public class AgentStarter {
 
-    /**
-     * 字节码增强的入口方法，方法名不能变
-     * @param agentArgs
-     * @param inst
-     */
-    public static void premain(String agentArgs, Instrumentation inst){
-        System.out.println("FirstAgent is Start...");
-        inst.addTransformer(new FirstTransformer());
-    }
+    private static final Logger LOG = LoggerFactory.getLogger(AgentStarter.class);
 
+    public static void premain(String args, Instrumentation instrumentation) {
+        LOG.info("执行时长计数器开启,参数{}", args);
+        try {
+            IExeCmd exeCmd = ExeCmdBuilder.buildExeCmd(args);
+            //没解析到命令不执行
+            if(exeCmd == null) {
+                return;
+            }
+            //添加字节码转换器
+            instrumentation.addTransformer(new ExecTimerTransformer(exeCmd));
+        } catch (Exception e) {
+            LOG.warn("执行时长计数器代理程序执行启动失败错误信息如下，但不影响程序正常:");
+            LOG.error(e.getMessage());
+        }
+    }
 }
